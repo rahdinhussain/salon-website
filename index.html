@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon</title>
+<meta name="description" content=""><!-- set by JS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home" data-page-title="Home" data-hero>
+<div id="preloader"></div>
+<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+<div id="site-header"></div>
+<main id="page">
+
+  <!-- 1 · HERO ------------------------------------------------------------ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow" id="heroEyebrow"></p>
+        <h1 class="hero-title" id="heroTitle">
+          <span class="hero-line">Beauty, crafted</span>
+          <span class="hero-line">beyond <em class="accent-word">expectation</em></span>
+        </h1>
+        <p class="hero-sub" id="heroSub"></p>
+        <div class="hero-cta">
+          <a class="btn magnetic" data-book>Book Now <span class="btn-arrow">→</span></a>
+          <a class="btn-ghost magnetic" href="services.html">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-visual" id="heroVisual">
+        <div class="float-card float-card--1" data-depth="26"><span class="float-card-tag">Precision</span></div>
+        <div class="float-card float-card--2" data-depth="16"><span class="float-card-tag">Color</span></div>
+        <div class="float-card float-card--3" data-depth="38"><span class="float-card-tag">Ritual</span></div>
+      </div>
+    </div>
+    <div class="orbit-badge" data-orbit></div>
+    <div class="scroll-cue" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- services marquee ----------------------------------------------------- -->
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="homeMarquee"></div></div>
+
+  <!-- 2 · INTRO SPLIT + STATS ---------------------------------------------- -->
+  <section class="section">
+    <div class="container intro-split">
+      <div class="clip-frame" data-reveal="clip">
+        <img id="introImg" alt="" width="1200" height="1500" loading="lazy" decoding="async">
+      </div>
+      <div>
+        <p class="eyebrow" data-reveal>Our Story</p>
+        <h2 class="section-title" data-reveal>A studio built on <span class="accent-word">devotion</span></h2>
+        <p class="text-soft" id="introText" data-reveal data-delay="0.1" style="margin-top:1.2rem"></p>
+        <p class="text-soft" data-reveal data-delay="0.2" style="margin-top:1rem">Every appointment begins with a conversation and ends with a reveal — the in-between is pure ritual.</p>
+      </div>
+      <div class="stats-row" id="homeStats"></div>
+    </div>
+  </section>
+
+  <!-- 3 · SIGNATURE SERVICES ------------------------------------------------ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>Signature Services</p>
+        <h2 class="section-title" data-reveal>Rituals worth <span class="accent-word">returning</span> for</h2>
+      </div>
+      <div class="services-grid" id="homeServices" data-reveal-group></div>
+      <div class="section-foot">
+        <a class="btn-ghost magnetic" href="services.html">View All Services <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · EXPERIENCE STRIP -------------------------------------------------- -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>The Experience</p>
+        <h2 class="section-title" data-reveal>Three acts, one <span class="accent-word">transformation</span></h2>
+      </div>
+      <div class="steps" data-reveal-group>
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3 class="step-title">Consultation</h3>
+          <p class="step-text">We listen first. Your artist studies your features, lifestyle, and inspiration before a single strand is touched.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3 class="step-title">Ritual</h3>
+          <p class="step-text">Warm towels, scalp massage, precision technique — every service is performed as a slow, sensory ceremony.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3 class="step-title">Reveal</h3>
+          <p class="step-text">The mirror turns. You leave with a look designed to grow out beautifully and a plan to keep it that way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · TESTIMONIAL TEASER ------------------------------------------------ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="testimonial-teaser" id="homeQuote" data-reveal></div>
+      <div class="section-foot">
+        <a class="link-arrow" href="testimonials.html">Read all kind words <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · GALLERY STRIP ------------------------------------------------------ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>The Portfolio</p>
+        <h2 class="section-title" data-reveal>Recent work, straight from the <span class="accent-word">chair</span></h2>
+      </div>
+      <div class="gallery-strip" id="homeGallery" data-reveal-group></div>
+      <div class="section-foot">
+        <a class="btn-ghost magnetic" href="gallery.html">Explore the Gallery <span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · CTA BAND ------------------------------------------------------------ -->
+  <section class="cta-band">
+    <div class="container">
+      <h2 class="cta-band-title" data-reveal>Your chair is <span class="accent-word">waiting</span></h2>
+      <a class="btn magnetic" data-book data-reveal data-delay="0.15">Book Your Visit <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages/home.js"></script>
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon</title>
+<meta name="description" content=""><!-- set by JS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="services" data-page-title="Services" data-hero>
+<div id="preloader"></div>
+<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+<div id="site-header"></div>
+<main id="page">
+
+  <!-- MINI HERO ------------------------------------------------------------ -->
+  <section class="mini-hero">
+    <div class="container">
+      <p class="breadcrumb" data-reveal><a href="index.html">Home</a> <span aria-hidden="true">/</span> <b>Services</b></p>
+      <h1 class="mini-hero-title" data-reveal data-delay="0.08">Services</h1>
+      <p class="lead" id="servicesLead" data-reveal data-delay="0.16">Every ritual on our menu — tailored to you in consultation.</p>
+    </div>
+    <div class="float-card" id="servicesHeroCard" data-reveal data-delay="0.25"><span class="float-card-tag">The Menu</span></div>
+  </section>
+
+  <!-- FILTER CHIPS + SERVICE LIST ------------------------------------------ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>The Menu</p>
+        <h2 class="section-title" data-reveal>Choose your <span class="accent-word">ritual</span></h2>
+      </div>
+      <div class="chips" id="serviceChips" data-reveal role="group" aria-label="Filter services by category"></div>
+      <div class="service-list" id="serviceList" data-reveal-group></div>
+      <div class="section-foot">
+        <a class="link-arrow" href="pricing.html">See the price menu <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -------------------------------------------------------------- -->
+  <section class="cta-band">
+    <div class="container">
+      <h2 class="cta-band-title" data-reveal>Ready when you <span class="accent-word">are</span></h2>
+      <a class="btn magnetic" data-book data-reveal data-delay="0.15">Book Your Visit <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages/services.js"></script>
+</body></html>
