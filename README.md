@@ -36,7 +36,45 @@ salon-website/
         └── pages/*.js       Per-page rendering & page-specific animation
 ```
 
-## Personalization guide
+## Admin Panel (easiest way to personalize)
+
+No code editing needed. Open **`admin.html`** in your browser (double-click it, or
+visit `https://<your-site>/admin.html` once deployed). It is a graphical back-office
+that reads the live `SITE_CONFIG` and lets you edit everything — identity, brand
+color (visual color picker), contacts, hours, socials, stats, services, testimonials,
+team, gallery, page images, and SEO — with a live preview of the website beside the
+editor. `admin.html` is not linked from any public page.
+
+The save bar offers **three save modes**:
+
+1. **Save & Apply** — stores your edits in the browser's `localStorage`
+   (`salonConfigOverride`). Every page of the site merges this override on load, so
+   the whole site updates instantly — but only in *this* browser. Great for trying
+   things out. (`Ctrl/Cmd+S` works too; **Reset** clears the override.)
+2. **Download site-config.js** — downloads a complete replacement config file.
+   Replace `assets/js/site-config.js` in your project/repo with it to make the
+   changes permanent for every visitor.
+3. **Publish to GitHub** — commits the replacement `assets/js/site-config.js`
+   straight to your repository; GitHub Pages rebuilds the live site in ~1 minute.
+
+### Setting up Publish to GitHub (one time, ~2 minutes)
+
+1. On GitHub, click your avatar → **Settings** → **Developer settings** (bottom left).
+2. **Personal access tokens → Fine-grained tokens → Generate new token**.
+3. Under **Repository access**, choose **Only select repositories** and pick this
+   website's repository.
+4. Under **Permissions → Repository permissions**, set **Contents** to
+   **Read and Write** (nothing else is needed).
+5. Generate the token, copy it, and paste it into the admin panel's
+   **Publish to GitHub** panel (owner/repo/branch are prefilled).
+
+⚠️ The token is stored **only in your own browser's `localStorage`** (key `ghPat`,
+if you tick "remember token") — it is never sent anywhere except directly to
+GitHub's API. Revoke it any time from the same GitHub settings page.
+
+---
+
+## Personalization guide (editing the file by hand)
 
 ### Step 1 — Open `assets/js/site-config.js`
 

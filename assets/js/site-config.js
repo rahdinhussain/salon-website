@@ -318,3 +318,6 @@
     },
   };
 })();
+
+/* --- admin override layer (added for admin.html): applies saved overrides --- */
+(function(){try{var o=JSON.parse(localStorage.getItem('salonConfigOverride')||'null');if(!o)return;function m(t,s){for(var k in s){if(Object.prototype.hasOwnProperty.call(s,k)){var v=s[k];if(v&&typeof v==='object'&&!Array.isArray(v)&&t[k]&&typeof t[k]==='object'&&!Array.isArray(t[k])){m(t[k],v);}else{t[k]=v;}}}}m(window.SITE_CONFIG,o);}catch(e){console.warn('[admin] override ignored:',e);}})();
