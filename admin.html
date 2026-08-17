@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Admin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23B76E79'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin">
+
+  <!-- Top bar ------------------------------------------------------------ -->
+  <header class="admin-topbar">
+    <div class="admin-topbar-inner">
+      <span class="admin-brand"><span id="adminBrandName">Admin</span><span class="admin-brand-dot">.</span></span>
+      <span class="admin-badge">Admin</span>
+      <nav class="admin-toplinks" aria-label="Quick links">
+        <a href="index.html" target="_blank" rel="noopener">Open website ↗</a>
+        <a href="booking.html" target="_blank" rel="noopener">Open booking page ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Two-column layout --------------------------------------------------- -->
+  <div class="admin-layout">
+
+    <!-- LEFT: editing sections -->
+    <section class="admin-editor" aria-label="Site settings">
+      <p class="admin-intro">Edit every detail of your website below, then choose how to save:
+        apply in this browser, download the config file, or publish straight to GitHub.</p>
+
+      <div class="admin-sections" id="adminSections"><!-- built by admin.js --></div>
+
+      <!-- Sticky save bar -->
+      <div class="admin-savebar" id="adminSavebar">
+        <div class="admin-savebar-row">
+          <span class="admin-dirty" id="dirtyDot" title="Unsaved changes" hidden></span>
+          <span class="admin-override-badge" id="overrideBadge" hidden>Local overrides active</span>
+          <span class="admin-savebar-spacer"></span>
+          <button type="button" class="btn btn-small" id="btnSave">Save &amp; Apply</button>
+          <button type="button" class="btn-ghost btn-small" id="btnDownload">Download site-config.js</button>
+          <button type="button" class="btn-ghost btn-small" id="btnPublishToggle" aria-expanded="false">Publish to GitHub</button>
+          <button type="button" class="admin-reset" id="btnReset">Reset</button>
+        </div>
+
+        <!-- Publish to GitHub panel -->
+        <div class="admin-publish" id="publishPanel" hidden>
+          <div class="admin-publish-grid">
+            <label class="admin-field">
+              <span class="admin-label">Owner</span>
+              <input type="text" id="ghOwner" autocomplete="off">
+            </label>
+            <label class="admin-field">
+              <span class="admin-label">Repository</span>
+              <input type="text" id="ghRepo" autocomplete="off">
+            </label>
+            <label class="admin-field">
+              <span class="admin-label">Branch</span>
+              <input type="text" id="ghBranch" autocomplete="off">
+            </label>
+            <label class="admin-field">
+              <span class="admin-label">Personal access token</span>
+              <input type="password" id="ghToken" autocomplete="off" placeholder="github_pat_…">
+            </label>
+          </div>
+          <label class="admin-remember">
+            <input type="checkbox" id="ghRemember">
+            <span>Remember token in this browser (stored only in your localStorage)</span>
+          </label>
+          <div class="admin-publish-actions">
+            <button type="button" class="btn btn-small" id="btnPublish">Publish</button>
+            <span class="admin-hint">Creates a commit that replaces <code>assets/js/site-config.js</code> on your repo.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT: sticky live preview -->
+    <aside class="admin-preview" id="adminPreview" aria-label="Live preview">
+      <div class="admin-preview-head">
+        <span class="admin-preview-title">Live preview</span>
+        <button type="button" class="admin-preview-close" id="previewClose" aria-label="Hide preview">×</button>
+      </div>
+      <iframe class="admin-frame" id="adminFrame" src="index.html" title="Live preview of the website"></iframe>
+      <p class="admin-preview-status" id="previewStatus">Preview ready.</p>
+    </aside>
+  </div>
+
+  <!-- Mobile preview toggle -->
+  <button type="button" class="admin-preview-toggle" id="previewToggle">Preview ↑</button>
+
+  <!-- Toasts -->
+  <div class="admin-toasts" id="adminToasts" aria-live="polite"></div>
+
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/pages/admin.js"></script>
+</body></html>
