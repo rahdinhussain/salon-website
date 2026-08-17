@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon</title>
+<meta name="description" content=""><!-- set by JS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact" data-page-title="Contact" data-hero>
+<div id="preloader"></div>
+<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+<div id="site-header"></div>
+<main id="page">
+
+  <!-- MINI-HERO ------------------------------------------------------------ -->
+  <section class="mini-hero">
+    <div class="container">
+      <nav class="breadcrumb" data-reveal><a href="index.html">Home</a> <b>/</b> Contact</nav>
+      <h1 class="mini-hero-title" data-reveal>Say <span class="accent-word">Hello</span></h1>
+      <p class="lead" data-reveal data-delay="0.1">Questions, ideas, or a special occasion on the horizon — we're one message away.</p>
+    </div>
+  </section>
+
+  <!-- INFO CARDS -------------------------------------------------------------- -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>Get in Touch</p>
+        <h2 class="section-title" data-reveal>We'd love to <span class="accent-word">hear</span> from you</h2>
+      </div>
+      <div class="values-row" id="contactCards" data-reveal-group></div>
+    </div>
+  </section>
+
+  <!-- FORM + MAP ---------------------------------------------------------------- -->
+  <section class="section section-alt">
+    <div class="container intro-split">
+      <div>
+        <p class="eyebrow" data-reveal>Send a Message</p>
+        <h2 class="section-title" data-reveal style="margin-bottom:2.2rem">Drop us a <span class="accent-word">line</span></h2>
+        <form class="form-grid" id="contactForm" novalidate data-reveal>
+          <div class="field">
+            <label for="ctName">Your Name</label>
+            <input type="text" id="ctName" name="name" autocomplete="name" placeholder="Jane Doe">
+          </div>
+          <div class="field">
+            <label for="ctEmail">Email</label>
+            <input type="email" id="ctEmail" name="email" autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="field field--full">
+            <label for="ctMessage">Message</label>
+            <textarea id="ctMessage" name="message" placeholder="How can we help?"></textarea>
+          </div>
+          <div class="field field--full" style="flex-direction:row">
+            <button type="submit" class="btn magnetic">Send Message <span class="btn-arrow">→</span></button>
+          </div>
+          <p class="form-note field--full">Sending opens your email app with your message prefilled — nothing is stored on this site.</p>
+        </form>
+        <div class="form-success" id="contactSuccess" role="status"></div>
+      </div>
+      <aside>
+        <div class="map-frame" data-reveal>
+          <iframe id="mapFrame" title="Map to the studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="card" data-reveal style="margin-top:1.4rem">
+          <h3 class="price-menu-title">Opening Hours</h3>
+          <ul class="footer-hours" id="contactHours"></ul>
+          <hr class="hairline" style="margin:1.4rem 0">
+          <h3 class="price-menu-title">Follow Along</h3>
+          <div class="socials" id="contactSocials"></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CTA BAND ------------------------------------------------------------------- -->
+  <section class="cta-band">
+    <div class="container">
+      <h2 class="cta-band-title" data-reveal>Prefer to just <span class="accent-word">book</span>?</h2>
+      <a class="btn magnetic" data-book data-reveal data-delay="0.15">Book Your Visit <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages/contact.js"></script>
+</body></html>

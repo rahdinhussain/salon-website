@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon</title>
+<meta name="description" content=""><!-- set by JS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="gallery" data-page-title="Gallery" data-hero>
+<div id="preloader"></div>
+<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+<div id="site-header"></div>
+<main id="page">
+
+  <!-- 1 · MINI-HERO -------------------------------------------------------- -->
+  <section class="mini-hero">
+    <div class="container">
+      <p class="breadcrumb" data-reveal><a href="index.html">Home</a> / <b>Gallery</b></p>
+      <p class="eyebrow" id="galleryEyebrow" data-reveal data-delay="0.05"></p>
+      <h1 class="mini-hero-title" data-reveal data-delay="0.1">The <span class="accent-word">Gallery</span></h1>
+      <p class="lead" data-reveal data-delay="0.2">Fresh work and quiet corners — every frame straight from the studio floor.</p>
+    </div>
+  </section>
+
+  <!-- 2 · FILTERS + MASONRY ------------------------------------------------- -->
+  <section class="section">
+    <div class="container">
+      <div class="chips" id="galleryChips" role="group" aria-label="Filter gallery by category" data-reveal></div>
+      <div class="masonry" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- 3 · CTA BAND ------------------------------------------------------------ -->
+  <section class="cta-band">
+    <div class="container">
+      <h2 class="cta-band-title" data-reveal>Your chair is <span class="accent-word">waiting</span></h2>
+      <a class="btn magnetic" data-book data-reveal data-delay="0.15">Book Your Visit <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Lightbox (fixed overlay; toggled by pages/gallery.js) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <img id="lightboxImg" alt="">
+  <p class="lightbox-caption" id="lightboxCaption"></p>
+  <button class="lightbox-btn lightbox-close" id="lightboxClose" type="button" aria-label="Close viewer">✕</button>
+  <button class="lightbox-btn lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous image">←</button>
+  <button class="lightbox-btn lightbox-next" id="lightboxNext" type="button" aria-label="Next image">→</button>
+</div>
+
+<div id="site-footer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages/gallery.js"></script>
+</body></html>

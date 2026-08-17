@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon</title>
+<meta name="description" content=""><!-- set by JS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="booking" data-page-title="Book Your Visit" data-hero>
+<div id="preloader"></div>
+<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+<div id="site-header"></div>
+<main id="page">
+
+  <!-- MINI-HERO ------------------------------------------------------------ -->
+  <section class="mini-hero">
+    <div class="container">
+      <nav class="breadcrumb" data-reveal><a href="index.html">Home</a> <b>/</b> Booking</nav>
+      <h1 class="mini-hero-title" data-reveal>Book Your <span class="accent-word">Visit</span></h1>
+      <p class="lead" data-reveal data-delay="0.1">Choose your ritual, pick a moment — we take care of everything else.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM + SIDE PANEL ---------------------------------------------- -->
+  <section class="section">
+    <div class="container">
+      <!-- Injected by booking.js only when SITE_CONFIG.bookingUrl is set -->
+      <div id="externalBooking"></div>
+      <div class="intro-split">
+        <div>
+          <p class="eyebrow" data-reveal>Request an Appointment</p>
+          <h2 class="section-title" data-reveal style="margin-bottom:2.2rem">Tell us when — <span class="accent-word">we'll be ready</span></h2>
+          <form class="form-grid booking-form" id="bookingForm" novalidate data-reveal>
+            <div class="field">
+              <label for="bkName">Your Name</label>
+              <input type="text" id="bkName" name="name" autocomplete="name" placeholder="Jane Doe">
+            </div>
+            <div class="field">
+              <label for="bkPhone">Phone</label>
+              <input type="tel" id="bkPhone" name="phone" autocomplete="tel" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="field">
+              <label for="bkEmail">Email</label>
+              <input type="email" id="bkEmail" name="email" autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="bkService">Service</label>
+              <select id="bkService" name="service">
+                <option value="" selected disabled>Select a service</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bkDate">Preferred Date</label>
+              <input type="date" id="bkDate" name="date">
+            </div>
+            <div class="field">
+              <label for="bkTime">Preferred Time</label>
+              <select id="bkTime" name="time">
+                <option value="" selected disabled>Select a time</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="bkNotes">Notes <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+              <textarea id="bkNotes" name="notes" placeholder="Anything we should know — inspiration, sensitivities, occasion…"></textarea>
+            </div>
+            <div class="field field--full" style="flex-direction:row;flex-wrap:wrap;gap:0.9rem">
+              <button type="submit" class="btn magnetic">Send Booking Request <span class="btn-arrow">→</span></button>
+              <a class="btn-ghost magnetic" id="whatsappBtn" href="#" target="_blank" rel="noopener">Message on WhatsApp</a>
+            </div>
+            <p class="form-note field--full">Sending opens your email app with everything prefilled — nothing is stored on this site.</p>
+          </form>
+          <div class="form-success" id="bookingSuccess" role="status"></div>
+        </div>
+        <aside>
+          <div class="clip-frame" data-reveal="clip">
+            <img id="bookingImg" alt="" width="1200" height="1500" loading="lazy" decoding="async">
+          </div>
+          <div class="card" data-reveal style="margin-top:1.4rem">
+            <h3 class="price-menu-title">Opening Hours</h3>
+            <ul class="footer-hours" id="bookingHours"></ul>
+            <hr class="hairline" style="margin:1.4rem 0">
+            <p class="text-soft" id="bookingAddress" style="margin-bottom:1.1rem"></p>
+            <a class="link-arrow" id="bookingPhone" href="#"><span id="bookingPhoneText"></span> <span aria-hidden="true">→</span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+<div id="site-footer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="assets/js/site-config.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages/booking.js"></script>
+</body></html>
